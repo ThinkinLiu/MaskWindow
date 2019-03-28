@@ -113,7 +113,7 @@ Page({
     var index = this.data.selectIndex;
     var text;
     if (index >= 0 && index < 4) {
-      reatextson = this.data.maskWindowList[index];
+      text = this.data.maskWindowList[index];
     } else if (index == 4) {
       text = this.data.maskWindowInputValue;
     } else {
