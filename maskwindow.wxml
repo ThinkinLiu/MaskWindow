@@ -1,0 +1,34 @@
+<!--maskwindow/maskwindow.wxml-->
+
+<view class='maskWindow' wx:if="{{isMaskWindowShow}}" catchtap='maskWindowBgClick' catchtouchmove='move'>
+  <view class='maskWindowContent' catchtap='clickTap'>
+    <text class="maskWindowTitleText" >取消原因（可选）</text>
+    <view class='maskWindowList' wx:for='{{maskWindowList}}' wx:for-index='index' wx:if='{{index%2===0}}'>
+        <view class="maskWindowText {{index == selectIndex? 'maskWindowText_selected' : 'maskWindowText_unselected'}}" catchtap='maskWindowTableSelect' data-window-Index='{{index}}'>{{maskWindowList[index]}}</view>
+        <view class="maskWindowText {{index + 1 == selectIndex? 'maskWindowText_selected' : 'maskWindowText_unselected'}}" catchtap='maskWindowTableSelect' data-window-Index='{{index+1}}'>{{maskWindowList[index+1]}}</view>
+    </view>
+    <view class='maskWindowInputView'>
+      <input class='maskWindowInput' maxlength='100' placeholder='请输入其他原因' hidden='{{!isMaskWindowInputShow}}' bindinput='maskWindowInput'></input>
+    </view>
+    <view class='maskWindowBtnView'>
+      <view class='maskWindowBtn' catchtap='maskWindowOk'>确定</view>
+      <view class='maskWindowBtn' catchtap='maskWindowCancel'>取消</view>
+    </view>
+  </view>
+</view>
+
+<button bindtap='cancelBtn'>取消</button>
+
+<text>\r\n页面可以滚动。。。
+\r\n\r\n\r\n
+1.。。。弹窗后不可滚动
+\r\n\r\n\r\n
+2.。。。
+\r\n\r\n\r\n
+3.。。。
+\r\n\r\n\r\n
+4.。。。
+\r\n\r\n\r\n
+5.。。。
+\r\n\r\n\r\n
+底部</text>
