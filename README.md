@@ -1,6 +1,8 @@
 # MaskWindow
 微信小程序蒙版弹窗(取消原因选择)
 
+相关博文：[ThinkinLiu的简书](https://www.jianshu.com/u/858b1035f89e)
+
 1. 实现蒙版弹窗
 2. 实现事件拦截
 3. 实现list双列显示
